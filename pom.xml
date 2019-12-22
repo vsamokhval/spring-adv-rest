@@ -18,7 +18,7 @@
 		<spring-data-jpa.version>2.1.9.RELEASE</spring-data-jpa.version>
 		<jta.version>1.1</jta.version>
 		<logback.version>1.2.3</logback.version>
-		<jackson-version>2.9.8</jackson-version>
+		<jackson-version>2.9.10.1</jackson-version>
 	</properties>
 
 	<dependencies>
