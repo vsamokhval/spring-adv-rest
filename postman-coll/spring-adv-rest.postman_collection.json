@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "c52c8f25-1e02-417e-a62e-b6dde3b5d1bb",
+		"name": "spring-adv-rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "retrieve all users with ordering and limitations of count",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/pdf",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/rest-serv/users?count=2&sortOrder=ASC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest-serv",
+						"users"
+					],
+					"query": [
+						{
+							"key": "count",
+							"value": "2"
+						},
+						{
+							"key": "sortOrder",
+							"value": "ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getting single user by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/pdf",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/rest-serv/users/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest-serv",
+						"users",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adding new user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/pdf",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"firstName\":\"Erik\",\"lastName\":\"Shrody\",\"email\":\"everlast@example.com\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/rest-serv/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest-serv",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upodating existing user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/pdf",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":5,\"firstName\":\"Erik\",\"lastName\":\"Shrody\",\"email\":\"everlast_hop@example.com\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/rest-serv/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest-serv",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getting all users using client",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/pdf",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/rest-serv/client/users?count=2&sortOrder=ASC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest-serv",
+						"client",
+						"users"
+					],
+					"query": [
+						{
+							"key": "count",
+							"value": "2"
+						},
+						{
+							"key": "sortOrder",
+							"value": "ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getting user by id using client",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/pdf",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/rest-serv/client/users/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest-serv",
+						"client",
+						"users",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
